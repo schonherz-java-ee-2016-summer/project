@@ -1,0 +1,24 @@
+html, body {
+    height: 100%;
+}
+
+header {
+    margin: auto;
+}
+
+body {
+    background-color: #eff3f6;
+    position: relative;
+    padding-bottom: 100px;
+    min-height: 100%;
+}
+
+h6.welcome-text {
+    font-size: 2.0em;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
