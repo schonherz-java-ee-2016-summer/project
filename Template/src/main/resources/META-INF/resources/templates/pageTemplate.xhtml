@@ -12,14 +12,17 @@
         <h:outputStylesheet library="css" name="bootstrap.min.css"/>
         <h:outputStylesheet library="css" name="bootstrap-theme.min.css"/>
         <h:outputStylesheet library="css" name="theme.css"/>
-        <title><ui:insert name="title"></ui:insert></title>
+        <title><ui:insert name="title"/></title>
     </h:head>
 
     <h:body>
+
         <header class="container-fluid header">
             <div class="row">
                 <div class="col-xs-12 col-sm-1 col-md-1">
-                    <h:graphicImage library="images" name="logo.png" style="width: 100px" class="img-responsive"/>
+                    <h:outputLink value="/../landing/home.xhtml">
+                        <h:graphicImage library="images" name="logo.png" style="width: 100px" class="img-responsive"/>
+                    </h:outputLink>
                 </div>
                 <div class="col-xs-12 col-sm-11 col-md-7">
                     <h6 class="welcome-text">Welcome to ConOrg!</h6>
@@ -27,12 +30,13 @@
                 <div class="col-xs-12 col-sm-12 col-md-4">
                     <h:form>
                         <p:menubar>
-                            <p:menuitem value="Venue" url="#"/>
-                            <p:menuitem value="Band" url="#"/>
-                            <p:menuitem value="Admin" url="#"/>
+                            <p:menuitem value="Band" url="/../band"/>
+                            <p:menuitem value="Venue" url="/../venue"/>
                             <p:submenu label="Profile">
-                                <p:menuitem value="Show" url="#"/>
+                                <p:menuitem value="Show" url="/../landing/secured/showProfile.xhtml" />
+                                <p:menuitem value="Edit" url="/../landing/secured/editProfile.xhtml" />
                             </p:submenu>
+                            <p:menuitem value="Admin" url="/../landing/admin/adminLayout.xhtml"/>
                         </p:menubar>
                     </h:form>
                 </div>
